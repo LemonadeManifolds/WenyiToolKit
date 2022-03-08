@@ -1,0 +1,10 @@
+<image class="mid-bg-img" mode="widthFix" src="/assets/figure/poster_2.png"></image>
+<view class="select-mid-page">
+  <view class="mid-title">
+    <view>点击选择一张你喜欢的背景图!</view>
+    <view wx:if="{{title}}">{{title}}</view>
+  </view>
+  <view class="mid-img-con" wx:for="{{midArrImgs}}" wx:for-index="midImgIndex" wx:key="{{midImgIndex}}" data-url="{{item}}" bindtap="selectMid">
+    <image class="mid-img" src="{{item.path}}">item</image>
+  </view>
+</view>

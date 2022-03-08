@@ -1,0 +1,10 @@
+<image class="bkg-bg-img" mode="widthFix" src="/assets/figure/poster_2.png"></image>
+<view class="select-bkg-page">
+  <view class="bkg-title">
+    <view>点击选择一张你喜欢的背景图!</view>
+    <view wx:if="{{title}}">{{title}}</view>
+  </view>
+  <view class="bkg-img-con" wx:for="{{bkgArrImgs}}" wx:for-index="bkgImgIndex" wx:key="{{bkgImgIndex}}" data-url="{{item}}" bindtap="selectBkg">
+    <image class="bkg-img" src="{{item.path}}">item</image>
+  </view>
+</view>

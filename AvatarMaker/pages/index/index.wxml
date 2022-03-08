@@ -1,0 +1,57 @@
+<view class="index-page">
+  
+
+
+  <view class="index-page-bg">
+    <image class="page-bg-img" src="/assets/figure/poster_small.jpg" mode="widthFix"></image>
+  </view>
+
+  
+  <view class="index-content">
+    <view class='about'>
+            <text> 
+              清华大学数学科学系文艺部出品
+              欢迎使用未知鼠的头像制作小程序
+              选择相应的底色，背景和前景
+              双击保存，就可以完成制作啦
+              3月27日,『未知数 · 结』
+              和我们一起解开你的心结
+            </text>
+          </view>
+          <view>
+            
+          </view>
+
+    <view class="content-top">
+
+      <view class="user-img-content">
+        <image class="user-elm-img" src="{{bkgImg}}"></image>
+        <image class="user-elm-img" src="{{midImg}}"></image>
+        <image class="user-elm-img" src="{{frontImg}}"></image> 
+
+      </view>
+
+      <view class="user-login">
+        <view class="other-btn-con">
+  
+          <button class="click-btn click-upload-btn" bindtap="selectBkgImg">选择头像底色</button>
+          <button class="click-btn click-upload-btn" bindtap="selectMidImg">选择头像背景</button>
+          <button class="click-btn click-upload-btn" bindtap="selectFrontImg">选择头像前景</button>
+          <button class="click-btn click-upload-btn" bindtap="resetImg">重置画板</button>
+          <button class="click-btn click-upload-btn" bindtap="savePhoto">保存头像</button>
+
+
+
+        </view>
+      </view>
+    </view>
+    <official-account style="position:absolute;bottom:0;left:0;right:0;"></official-account>
+  </view>
+
+</view>
+
+
+<!-- 隐藏式canvas  用于绘制头像 -->
+<view class="hidden-canvas">
+  <canvas type="2d" disable-scroll="true" id="canvas_box" class="canvas_box" style="width: 300px;height: 300px"></canvas>
+</view>

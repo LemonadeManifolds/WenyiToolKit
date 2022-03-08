@@ -1,0 +1,10 @@
+<image class="front-bg-img" mode="widthFix" src="/assets/figure/poster_2.png"></image>
+<view class="select-front-page">
+  <view class="front-title">
+    <view>点击选择一张你喜欢的背景图!</view>
+    <view wx:if="{{title}}">{{title}}</view>
+  </view>
+  <view class="front-img-con" wx:for="{{frontArrImgs}}" wx:for-index="frontImgIndex" wx:key="{{frontImgIndex}}" data-url="{{item}}" bindtap="selectFront">
+    <image class="front-img" src="{{item.path}}">item</image>
+  </view>
+</view>
